@@ -138,17 +138,27 @@ export function Hero() {
           transition={{ duration: 1, ease, delay: 0.45 }}
         >
           <div
-            className="flex h-full w-full items-center justify-center p-6 text-center"
+            className={`flex h-full w-full items-center justify-center text-center ${profile.profileImage ? '' : 'p-6'}`}
             style={{
               backgroundColor: '#b9bdb5',
-              backgroundImage:
-                'repeating-linear-gradient(45deg, rgba(20,33,61,0.12) 0 2px, transparent 2px 12px)',
+              backgroundImage: profile.profileImage
+                ? undefined
+                : 'repeating-linear-gradient(45deg, rgba(20,33,61,0.12) 0 2px, transparent 2px 12px)',
               clipPath: 'polygon(8% 0, 92% 2%, 100% 18%, 97% 60%, 100% 100%, 0 100%, 3% 55%, 0 14%)',
             }}
           >
-            <span className="-rotate-[3deg] bg-paper px-3.5 py-1.5 font-hand text-[28px] font-bold leading-[1.1]">
-              profile photo placeholder
-            </span>
+            {profile.profileImage ? (
+              <img
+                src={profile.profileImage}
+                alt={profile.name}
+                className="h-full w-full object-cover object-center"
+                loading="eager"
+              />
+            ) : (
+              <span className="-rotate-[3deg] bg-paper px-3.5 py-1.5 font-hand text-[28px] font-bold leading-[1.1]">
+                profile photo placeholder
+              </span>
+            )}
           </div>
         </motion.div>
         <div className="absolute left-[4%] top-0 h-[30px] w-[110px] -rotate-[28deg] bg-sun/80" aria-hidden="true" />

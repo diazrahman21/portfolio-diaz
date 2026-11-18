@@ -2,6 +2,7 @@ export const profile = {
   greeting: "Hi, I'm Diaz",
   name: 'Muh Diaz Nazarudin Rahman',
   shortName: 'Diaz Rahman',
+  profileImage: '/assets/ppsaya.webp',
   headline:
     'Full-stack and backend developer building reliable, AI-powered web products.',
   intro:
