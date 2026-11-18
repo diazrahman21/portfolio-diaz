@@ -110,6 +110,10 @@ export const projects = [
     description: 'A document reader powered by Vision AI and hosted on Cloudflare.',
     technologies: ['Next.js', 'TypeScript', 'Cloudflare', 'Vision AI'],
     tone: 'powder',
+    liveUrl: 'https://smart-document-reader.muhdiaznazarudinrahman.workers.dev/login',
+    repoUrl: 'https://github.com/muhdiaznazarudinrahman/smart-document-reader',
+    image: '/assets/smartdoc.webp',
+    imageAlt: 'Tangkapan layar Smart Document Reader',
   },
   {
     title: 'Bedah Docs',
@@ -117,12 +121,16 @@ export const projects = [
       'A document analysis project built with Next.js and TypeScript. More details coming soon.',
     technologies: ['Next.js', 'TypeScript'],
     tone: 'pink',
+    liveUrl: '',
+    repoUrl: '',
   },
   {
     title: 'Job Board & Recruitment App',
     description: 'A job board and recruitment application built with Laravel 12.',
     technologies: ['Laravel 12', 'PHP'],
     tone: 'sun',
+    liveUrl: '',
+    repoUrl: '',
   },
   {
     title: 'PDF Summarizer – Flyrank AI',
@@ -130,6 +138,8 @@ export const projects = [
       'A RAG-based application where users upload PDFs and receive AI summaries organized around their selected key points.',
     technologies: ['TypeScript', 'RAG', 'AI'],
     tone: 'ink',
+    liveUrl: '',
+    repoUrl: '',
   },
   {
     title: 'Coding Camp Team Application',
@@ -137,6 +147,8 @@ export const projects = [
       'Developed with a team of six in two months. Delivered 5+ key features, deployed to Netlify, and achieved a final score of 94/100.',
     technologies: ['React', 'Vite', 'Flask', 'Supabase'],
     tone: 'mint',
+    liveUrl: '',
+    repoUrl: '',
   },
 ]
 
