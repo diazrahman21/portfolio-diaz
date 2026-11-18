@@ -1,0 +1,27 @@
+import { motion, useReducedMotion } from 'framer-motion'
+import type { ReactNode } from 'react'
+
+type Props = {
+  children: ReactNode
+  className?: string
+  delay?: number
+  y?: number
+  rotate?: number
+  once?: boolean
+}
+
+export function Reveal({ children, className, delay = 0, y = 28, rotate = 0, once = true }: Props) {
+  const reduce = useReducedMotion()
+  if (reduce) return <div className={className}>{children}</div>
+  return (
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y, rotate: rotate * 0.5 }}
+      whileInView={{ opacity: 1, y: 0, rotate }}
+      viewport={{ once, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number], delay }}
+    >
+      {children}
+    </motion.div>
+  )
+}

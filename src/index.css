@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14213d;
+  --color-paper: #f7f5ee;
+  --color-ground: #e3e1d8;
+  --color-sun: #ffc93c;
+  --color-signal: #e8452c;
+  --color-sky: #2d5be3;
+  --color-pink: #ffb3c7;
+  --color-mint: #9ed8b5;
+  --color-powder: #9ec1ff;
+  --color-kraft: #cdbb94;
+  --color-note: #ffe98a;
+
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --font-hand: "Caveat", cursive;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ground);
+  background-image: radial-gradient(rgba(20, 33, 61, 0.1) 1px, transparent 1px);
+  background-size: 16px 16px;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+::selection {
+  background: var(--color-sun);
+  color: var(--color-ink);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-sky);
+  outline-offset: 3px;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+}
