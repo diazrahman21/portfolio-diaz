@@ -68,7 +68,7 @@ export function Projects() {
                         {p.image ? (
                           <motion.img
                             src={p.image}
-                            alt={p.imageAlt || `${p.title} screenshot`}
+                            alt={`${p.title} screenshot`}
                             className="h-full w-full object-cover object-top"
                             whileHover={{ scale: 1.04 }}
                             transition={{ type: 'spring', stiffness: 260, damping: 20 }}

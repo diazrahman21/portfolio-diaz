@@ -114,7 +114,6 @@ export const projects = [
     liveUrl: 'https://smart-document-reader.muhdiaznazarudinrahman.workers.dev/login',
     repoUrl: 'https://github.com/muhdiaznazarudinrahman/smart-document-reader',
     image: '/assets/smartdoc.webp',
-    imageAlt: 'Tangkapan layar Smart Document Reader',
   },
   {
     title: 'Bedah Docs',
@@ -124,6 +123,7 @@ export const projects = [
     tone: 'pink',
     liveUrl: '',
     repoUrl: '',
+    image: '/assets/bedahdocs.webp',
   },
   {
     title: 'Job Board & Recruitment App',
@@ -131,16 +131,8 @@ export const projects = [
     technologies: ['Laravel 12', 'PHP'],
     tone: 'sun',
     liveUrl: '',
-    repoUrl: '',
-  },
-  {
-    title: 'PDF Summarizer – Flyrank AI',
-    description:
-      'A RAG-based application where users upload PDFs and receive AI summaries organized around their selected key points.',
-    technologies: ['TypeScript', 'RAG', 'AI'],
-    tone: 'ink',
-    liveUrl: '',
-    repoUrl: '',
+    repoUrl: 'https://github.com/diazrahman21/jobs_dicoding',
+    image: '/assets/dicoding.webp',
   },
   {
     title: 'Coding Camp Team Application',
@@ -148,9 +140,19 @@ export const projects = [
       'Developed with a team of six in two months. Delivered 5+ key features, deployed to Netlify, and achieved a final score of 94/100.',
     technologies: ['React', 'Vite', 'Flask', 'Supabase'],
     tone: 'mint',
-    liveUrl: '',
+    liveUrl: 'https://capstone-cc25-cf225.netlify.app/',
     repoUrl: '',
+    image: '/assets/IIIdetect.webp',
   },
+  {
+    title : 'Baca Quran',
+    description : 'A Quran reading application built with TypeScript and Next.js.',
+    technologies : ['TypeScript', 'Next.js'],
+    tone : 'sun',
+    liveUrl : 'https://bacaquran-web.vercel.app/',
+    repoUrl : 'https://github.com/diazrahman21/al-quran-web',
+    image : '/assets/bacaquran.webp',
+  }
 ]
 
 export const experience = [
@@ -171,10 +173,20 @@ export const experience = [
     company: 'PT Vidio Dot Com, Jakarta, Indonesia',
     color: '#9ec1ff',
     points: [
-      'Built Match Replacer and SnackVideo Converter to automate content processing.',
+      'Built SnackVideo Converter to automate content processing.',
       'Reported 2,000+ piracy websites.',
       'Monitored illegal live streams and reported illegal applications.',
       'Analyzed piracy patterns and supported copyright enforcement.',
+    ],
+  },
+  {
+    period: 'May–Aug 2025',
+    role: 'Student Employment, Tracer Study',
+    company: 'Universitas Ahmad Dahlan',
+    color: '#ffb3c7',
+    points: [
+      'Contacted 100+ alumni through surveys and direct outreach.',
+      'Helped validate and recap data within two weeks.',
     ],
   },
   {
@@ -200,16 +212,7 @@ export const experience = [
       'Mentored students in algorithms and C++ programming.',
     ],
   },
-  {
-    period: 'May–Aug 2025',
-    role: 'Student Employment, Tracer Study',
-    company: 'Universitas Ahmad Dahlan',
-    color: '#ffb3c7',
-    points: [
-      'Contacted 100+ alumni through surveys and direct outreach.',
-      'Helped validate and recap data within two weeks.',
-    ],
-  },
+
 ]
 
 export const education = {
