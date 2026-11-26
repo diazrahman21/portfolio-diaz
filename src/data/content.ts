@@ -39,13 +39,15 @@ export const marqueeItems = [
 export const about = {
   heading: 'Informatics graduate, hands-on builder.',
   paragraphs: [
-    'I graduated from Universitas Ahmad Dahlan with a GPA of 3.57/4.00, on time and in under four years. Along the way I built full-stack and AI-powered applications with TypeScript, React, Flask, and Supabase, and developed a steady interest in cyber security.',
-    "I'm looking for a full-stack or backend developer role where I can build reliable, impactful digital products.",
+    "I am an Informatics graduate from Universitas Ahmad Dahlan with a GPA of 3.57/4.00, having completed my degree in 3 years and 10 months. I have hands-on experience in full-stack development, backend engineering, and AI-powered applications, with a strong focus on building scalable, reliable, and user-centered digital solutions.",
+    "Throughout my professional and academic journey, I have developed web applications, implemented RESTful APIs, and built AI-driven systems using technologies such as TypeScript, React, Flask, Next.js, and Supabase. My experience includes developing a RAG-based document summarization application as a Backend AI Engineer Intern at FlyRank AI, as well as creating automation tools and supporting digital content security operations at PT Vidio Dot Com.",
+    "I am passionate about continuous learning, solving technical challenges, and collaborating with teams to turn ideas into meaningful products. I am currently seeking opportunities as a Full-Stack Developer or Backend Developer, where I can contribute my technical skills and grow as a software engineer."
+
   ],
   stats: [
     { value: 3.57, suffix: '', decimals: 2, label: 'GPA out of 4.00' },
-    { value: 2000, suffix: '+', decimals: 0, label: 'piracy websites reported at Vidio' },
-    { value: 25, suffix: '', decimals: 0, label: 'teaching assistants coordinated' },
+    { value: 1, suffix: '+', decimals: 0, label: 'years of experience' },
+    { value: 20, suffix: '', decimals: 0, label: 'projects completed' },
     {
       value: 8,
       suffix: '',
@@ -251,12 +253,36 @@ export const education = {
   ],
 }
 
-export const certificates = [
-  { issuer: 'Google', title: 'Google AI Essentials', color: '#f7f5ee' },
-  { issuer: 'IBM', title: 'IBM Code Generation and Optimization', color: '#9ec1ff' },
+export type Certificate = {
+  issuer: string
+  title: string
+  color: string
+  /** Path inside /public (e.g. '/assets/google-ai-essentials.webp') or a full image URL. */
+  image?: string
+  /** Verification / credential URL. Opens in a new tab when set. */
+  link?: string
+}
+
+export const certificates: Certificate[] = [
+  {
+    issuer: 'Google',
+    title: 'Google AI Essentials',
+    color: '#f7f5ee',
+    // image: '/assets/google-ai-essentials.webp',
+    // link: 'https://your-credential-url.com',
+  },
+  {
+    issuer: 'IBM',
+    title: 'IBM Code Generation and Optimization',
+    color: '#9ec1ff',
+    // image: '/assets/ibm-code-generation.webp',
+    // link: 'https://your-credential-url.com',
+  },
   {
     issuer: 'Huawei ICT Academy',
     title: 'Huawei ICT Academy HCIA-Security',
     color: '#ffb3c7',
+    // image: '/assets/huawei-hcia-security.webp',
+    // link: 'https://your-credential-url.com',
   },
 ]
